@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DD2B7C62356A55A004784D9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD2B7C52356A55A004784D9 /* Transaction.swift */; };
+		3DD2B7C82356A5C0004784D9 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD2B7C72356A5C0004784D9 /* TransactionsTableViewController.swift */; };
+		3DD2B7CA2356A5CF004784D9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD2B7C92356A5CF004784D9 /* TransactionTableViewCell.swift */; };
 		3DFC555823568DC000BA4D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC555723568DC000BA4D31 /* AppDelegate.swift */; };
 		3DFC555A23568DC000BA4D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC555923568DC000BA4D31 /* SceneDelegate.swift */; };
 		3DFC555F23568DC000BA4D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFC555D23568DC000BA4D31 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DD2B7C52356A55A004784D9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		3DD2B7C72356A5C0004784D9 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+		3DD2B7C92356A5CF004784D9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		3DFC555423568DC000BA4D31 /* SpendingTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpendingTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC555723568DC000BA4D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFC555923568DC000BA4D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD2B7CB2356A676004784D9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DD2B7C72356A5C0004784D9 /* TransactionsTableViewController.swift */,
+				3DD2B7C92356A5CF004784D9 /* TransactionTableViewCell.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		3DFC554B23568DC000BA4D31 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +72,8 @@
 				3DFC556C23568DE800BA4D31 /* Storyboards */,
 				3DFC556B23568DDE00BA4D31 /* Resources */,
 				3DFC556523568DC200BA4D31 /* Info.plist */,
+				3DD2B7C52356A55A004784D9 /* Transaction.swift */,
+				3DD2B7CB2356A676004784D9 /* View Controller */,
 			);
 			path = SpendingTracker;
 			sourceTree = "<group>";
@@ -151,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD2B7C82356A5C0004784D9 /* TransactionsTableViewController.swift in Sources */,
+				3DD2B7CA2356A5CF004784D9 /* TransactionTableViewCell.swift in Sources */,
 				3DFC555823568DC000BA4D31 /* AppDelegate.swift in Sources */,
 				3DFC555A23568DC000BA4D31 /* SceneDelegate.swift in Sources */,
+				3DD2B7C62356A55A004784D9 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

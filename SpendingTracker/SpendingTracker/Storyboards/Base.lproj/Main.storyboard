@@ -6,22 +6,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Your Transactions-->
         <scene sceneID="eQB-b7-Akq">
             <objects>
-                <tableViewController id="xsh-oC-mSp" sceneMemberID="viewController">
+                <tableViewController id="xsh-oC-mSp" customClass="TransactionsTableViewController" customModule="SpendingTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UUk-oG-nlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1vG-92-MTp">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="91" id="1vG-92-MTp" customClass="TransactionTableViewCell" customModule="SpendingTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1vG-92-MTp" id="glo-xF-COF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EGz-ao-lxp">
+                                            <rect key="frame" x="28" y="19" width="86" height="53"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18K-ju-gbE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-sL-I0s">
+                                                    <rect key="frame" x="0.0" y="37.5" width="86" height="15.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-zb-nnH">
+                                            <rect key="frame" x="322" y="33" width="72" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EGz-ao-lxp" firstAttribute="leading" secondItem="glo-xF-COF" secondAttribute="leadingMargin" constant="8" id="RKV-Vs-bko"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="EGz-ao-lxp" secondAttribute="bottom" constant="8" id="Sjs-cJ-rgN"/>
+                                        <constraint firstItem="3C0-zb-nnH" firstAttribute="trailing" secondItem="glo-xF-COF" secondAttribute="trailingMargin" id="mlU-Wh-gdT"/>
+                                        <constraint firstItem="EGz-ao-lxp" firstAttribute="top" secondItem="glo-xF-COF" secondAttribute="topMargin" constant="8" id="rcz-IN-GSE"/>
+                                        <constraint firstItem="3C0-zb-nnH" firstAttribute="centerY" secondItem="EGz-ao-lxp" secondAttribute="centerY" id="xJO-C7-nOR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="3C0-zb-nnH" id="HNl-U9-3qU"/>
+                                    <outlet property="dateLabel" destination="Qzk-sL-I0s" id="Hzz-qH-FWn"/>
+                                    <outlet property="locationLabel" destination="18K-ju-gbE" id="v3A-xL-nTq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,7 +66,7 @@
                             <outlet property="delegate" destination="xsh-oC-mSp" id="CGH-un-KEJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qHb-ts-UfB"/>
+                    <navigationItem key="navigationItem" title="Your Transactions" id="qHb-ts-UfB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9Y-S0-tCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

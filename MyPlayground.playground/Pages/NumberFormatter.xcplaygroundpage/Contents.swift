@@ -16,7 +16,8 @@ let percentFormatter = NumberFormatter()
 percentFormatter.numberStyle = .percent
 percentFormatter.usesSignificantDigits = true
 percentFormatter.minimumSignificantDigits = 5
-let percentString = percentFormatter.string(from: 0.2575)!
+let percentString = percentFormatter.string(from: 238380.2575)!
+print(percentString)
 
 // Spellout
 
